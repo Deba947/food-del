@@ -1,0 +1,181 @@
+/* Cart.css */
+
+.cart {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.cart-items {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  overflow-x: auto; /* enables horizontal scroll on very small screens */
+}
+
+.cart-items-title {
+  display: grid;
+  grid-template-columns: 80px 1.2fr 100px 100px 100px 60px;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  min-width: 600px; /* keeps table readable */
+}
+
+.cart-items-item {
+  font-weight: normal;
+}
+
+.cart-items img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-items hr {
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Remove (x) button */
+.cross {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.cross:hover {
+  transform: scale(1.2);
+}
+
+/* Bottom section */
+.cart-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cart-total {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.cart-total h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.cart-total button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: tomato;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.cart-total button:hover {
+  background: #45a049;
+}
+
+/* Promo code box */
+.cart-promocode {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.cart-promocode p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.cart-promocode-input {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cart-promocode-input input {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.cart-promocode-input button {
+  padding: 10px 15px;
+  background: #2196F3;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.cart-promocode-input button:hover {
+  background: #1976D2;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cart-items-title {
+    grid-template-columns: 60px 1fr 70px 70px 70px 40px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cart {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .cart-items-title {
+    grid-template-columns: 50px 1fr 60px 60px 60px 30px;
+    font-size: 11px;
+  }
+
+  .cart-items img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cart-bottom {
+    flex-direction: column;
+  }
+
+  .cart-total button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

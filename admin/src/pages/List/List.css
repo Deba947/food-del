@@ -1,0 +1,70 @@
+/* List.css */
+.list-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.list-table-format {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  border: 1px solid #cacaca;
+  font-size: 14px;  
+}
+
+.list-table-format.title {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.list-table-format img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+}
+
+@media (max-width: 900px) {
+  .list-table-format {
+    grid-template-columns: 0.7fr 1.5fr 1fr 0.7fr;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .list-table-format {
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 15px;
+    font-size: 12px;
+  }
+
+  /* Hide category on very small screens */
+  .list-table-format p:nth-child(3) {
+    display: none;
+  }
+
+  .list-table-format.title {
+    display: none;
+  }
+
+  .delete-btn {
+    padding: 3px 8px;
+    font-size: 12px;
+  }
+}
